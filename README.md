@@ -5,7 +5,7 @@
 
   <h1>@sptruz/color-name</h1>
 
-  <a href="https://sptruz.vercel.app/">https://sptruz.vercel.app/</a>
+<a href="https://sptruz.vercel.app/">https://sptruz.vercel.app/</a>
 
   <p></p>
 </div>
