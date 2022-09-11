@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/logo.svg" alt="@MKAbuMattar/sptruz"
+  <img src="https://raw.githubusercontent.com/sptruz/color-name/main/assets/logo.svg" alt="@MKAbuMattar/sptruz"
    width="300" height="300"
   />
 

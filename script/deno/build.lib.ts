@@ -54,7 +54,7 @@ const recursiveAndbuild = (
           /^(?:import|export)[\s\S]*?from\s*['"]([^'"]*)['"];$/gm,
           (line, target) => {
             if (target === '@jest/globals') {
-              return `import { expect } from "https://deno.land/x/expect@v0.2.6/mod.ts";\nconst test = Deno.test;`;
+              return `import { expect } from 'https://deno.land/x/expect@v0.2.6/mod.ts';\r\nconst test = Deno.test;`;
             }
 
             const targetNodePath = join(dirname(nodePath), target);
@@ -95,7 +95,12 @@ const recursiveAndbuild = (
     build(root);
   })();
 
-  writeFileSync(join(denoSrcRoot, 'mod.ts'), `export * from "./index.ts";\n`, {
+  const mod = `import ColorName from './index.ts';
+export * from './index.ts';
+export default ColorName;
+\r\n`;
+
+  writeFileSync(join(denoSrcRoot, 'mod.ts'), mod, {
     encoding: 'utf-8',
   });
 
