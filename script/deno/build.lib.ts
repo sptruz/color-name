@@ -97,8 +97,7 @@ const recursiveAndbuild = (
 
   const mod = `import ColorName from './index.ts';
 export * from './index.ts';
-export default ColorName;
-\r\n`;
+export default ColorName;\r\n`;
 
   writeFileSync(join(denoSrcRoot, 'mod.ts'), mod, {
     encoding: 'utf-8',
