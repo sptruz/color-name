@@ -38,7 +38,7 @@ import * as sptruzColorName from 'https://deno.land/x/sptruz_color_name@0.0.0-be
 or letest version:
 
 ```ts
-import * as sptruzColorName  from "https://deno.land/x/sptruz_color_name/mod.ts";
+import * as sptruzColorName from 'https://deno.land/x/sptruz_color_name/mod.ts';
 ```
 
 > NOTE: There isn't much of a change in how it's used, but the remainder of this README assumes you're using npm and importing straight from the @sptruz/color-name.
