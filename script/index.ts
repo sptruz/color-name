@@ -9,8 +9,7 @@ import data from './data/color.json';
   data.forEach((item) => {
     color[
       item.name
-        .replace('À', 'A')
-        .replace(/[^a-zA-Z0-9 ]/g, '')
+        .replace(/[!\";#$%&\'()*+,-./:;<=>?@[\]^_`{|}~]/g, '')
         .replace(/\s/g, '')
     ] = {
       hex: item.hex,

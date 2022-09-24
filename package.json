@@ -1,6 +1,6 @@
 {
   "name": "@sptruz/color-name",
-  "version": "0.0.0-beta.0.0.2",
+  "version": "0.0.0-beta.0.0.3",
   "description": "@sptruz/color-name is a package for a list of color names.",
   "keywords": [
     "sptruz",
@@ -37,8 +37,8 @@
     "clean:deno": "rm -rf deno",
     "clean": "yarn clean:lib && yarn clean:deno",
     "script:config:clone": "yarn clean:color-names && node -r esbuild-runner/register script/config/gitclone.config.ts",
-    "script:csv-to-json": "node -r esbuild-runner/register script/utils/csvToJson.util.ts",
-    "script:get-base": "node -r esbuild-runner/register script/index.ts",
+    "script:csv-to-json": "node -r esbuild-runner/register script/utils/csvToJson.util.ts && yarn fix",
+    "script:get-base": "node -r esbuild-runner/register script/index.ts && yarn fix",
     "play:ts": "nodemon -e ts -w . -x esr src/playground/playground.ts",
     "build:lib": "tsc --p tsconfig.cjs.json && rollup --config rollup.config.js",
     "build:deno": "node -r esbuild-runner/register script/deno/build.lib.ts",
