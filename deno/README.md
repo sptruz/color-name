@@ -41,6 +41,16 @@ or letest version:
 import * as sptruzColorName from 'https://deno.land/x/sptruz_color_name/mod.ts';
 ```
 
+### CDN
+
+```html
+<!-- jsDelivr -->
+<script src="https://cdn.jsdelivr.net/npm/@sptruz/color-name/lib/index.umd.js"></script>
+
+<!-- Unpkg -->
+<script src="https://unpkg.com/@sptruz/color-name/lib/index.umd.js"></script>
+```
+
 > NOTE: There isn't much of a change in how it's used, but the remainder of this README assumes you're using npm and importing straight from the @sptruz/color-name.
 
 ## Basic usage
@@ -49,10 +59,33 @@ import * as sptruzColorName from 'https://deno.land/x/sptruz_color_name/mod.ts';
 import sptruzColorName from '@sptruz/color-name';
 
 (() => {
-  const red = sptruzColorName.Red;
+  // get value of Red
+  console.log(sptruzColorName.Red);
+  // output: { hex: '#ff0000', hsl: [ 0, 100, 50 ], rgb: [ 255, 0, 0 ] }
 
-  console.log(red);
+  // get hex value of Red
+  console.log(sptruzColorName.Red.hex);
+  // output: #ff0000
 
-  // Output: { hex: '#ff0000', hsl: [ 0, 100, 50 ], rgb: [ 255, 0, 0 ] }
+  // get hsl value of Red
+  console.log(sptruzColorName.Red.hsl);
+  // output: [ 0, 100, 50 ]
+
+  // get rgb value of Red
+  console.log(sptruzColorName.Red.rgb);
+  // output: [ 255, 0, 0 ]
 })();
 ```
+
+## Supports
+
+- color name value
+  - hex value | example: `#ff0000`
+  - hsl value | example: `[ 0, 100, 50 ]`
+  - rgb value | example: `[ 255, 0, 0 ]`
+
+## License
+
+@sptruz/color-name is licensed under the [MIT License](https://raw.githubusercontent.com/sptruz/color-name/main/LICENSE).
+
+Created with ♥ by [@MKAbuMattar](https://github.com/MKAbuMattar).
